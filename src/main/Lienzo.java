@@ -14,8 +14,8 @@ public class Lienzo extends JPanel implements Runnable{
     final int escala = 3;
 
     public final int tamanioTitulo = tamanioTituloOriginal * escala; // 48*48 titulo
-    final int maxScreenCol = 16;
-    final int getMaxScreenRow = 12;
+    final int maxScreenCol = 15;
+    final int getMaxScreenRow = 10;
     final int screenWithd = tamanioTitulo * maxScreenCol; //768 pixel
     final int screenHeight = tamanioTitulo * getMaxScreenRow; //576 pixel
 
@@ -55,7 +55,6 @@ public class Lienzo extends JPanel implements Runnable{
         double nextDrawTime = System.nanoTime() + drawIntervalo;
 
         while(gameThread != null){
-            System.out.println("Esta corriendo");
 
             update();
             repaint();
