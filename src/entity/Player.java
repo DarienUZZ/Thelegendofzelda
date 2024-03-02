@@ -27,7 +27,7 @@ public class Player extends Entity{
 
         x = 100;
         y = 100;
-        speed = 8;
+        speed = 4;
         direction = "Down";
 
     }
@@ -52,7 +52,7 @@ public class Player extends Entity{
 
             //DOWN
 
-            down1 = ImageIO.read(getClass ().getResourceAsStream ( "/Sprites de personaje/link-sin-capa-frente.png" ));
+            down1 = ImageIO.read(getClass ().getResourceAsStream ( "/Sprites de personaje/link-sin-capa-frente1.0.png" ));
             down2 = ImageIO.read(getClass ().getResourceAsStream ( "/Sprites de personaje/link-sin-capa-frente.png" ));
 
             //LEFT
@@ -197,11 +197,11 @@ public class Player extends Entity{
                 image = right1;
                 break;
         }
-        int scaledWidth = gp.tamanioTitulo * 2;  // Puedes ajustar el factor de escala según tus necesidades
-        int scaledHeight = gp.tamanioTitulo * 2; // Puedes ajustar el factor de escala según tus necesidades
+//        int scaledWidth = gp.tamanioTitulo * 2;  // Puedes ajustar el factor de escala según tus necesidades
+//        int scaledHeight = gp.tamanioTitulo * 2; // Puedes ajustar el factor de escala según tus necesidades
 
         // Dibuja la imagen con el tamaño ajustado
-        g2.drawImage(image, x, y, scaledWidth, scaledHeight, null);
+        g2.drawImage(image, x, y, gp.tamanioTitulo, gp.tamanioTitulo, null);
 
     }
 
