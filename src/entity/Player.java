@@ -27,7 +27,7 @@ public class Player extends Entity{
 
         x = 100;
         y = 100;
-        speed = 4;
+        speed = 8;
         direction = "Down";
 
     }
@@ -197,11 +197,11 @@ public class Player extends Entity{
                 image = right1;
                 break;
         }
-//        int scaledWidth = gp.tamanioTitulo * 2;  // Puedes ajustar el factor de escala según tus necesidades
-//        int scaledHeight = gp.tamanioTitulo * 2; // Puedes ajustar el factor de escala según tus necesidades
+        int scaledWidth = gp.tamanioTitulo * 2;  // Puedes ajustar el factor de escala según tus necesidades
+        int scaledHeight = gp.tamanioTitulo * 2; // Puedes ajustar el factor de escala según tus necesidades
 
         // Dibuja la imagen con el tamaño ajustado
-        g2.drawImage(image, x, y, gp.tamanioTitulo, gp.tamanioTitulo, null);
+        g2.drawImage(image, x, y, scaledWidth, scaledHeight, null);
 
     }
 
